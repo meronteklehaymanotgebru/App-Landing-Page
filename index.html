@@ -7,14 +7,13 @@
     <title>Application Landing Page</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/1731d8bcda.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="https://i.pinimg.com/736x/1d/b9/9d/1db99daa9371bf0989f05a0bc12e2b9e.jpg" >
+    <link rel="icon" href="https://i.pinimg.com/736x/1d/b9/9d/1db99daa9371bf0989f05a0bc12e2b9e.jpg">
 </head>
 
 <body>
     <nav>
-        <img src="font/dit.ico" width="30" height="30"
-            alt="Dit logo">
-        <span>dit.io</span>
+        <img src="font/dit.ico" width="30" height="30" alt="Dit logo">
+        <p id="logo-name">dit.io</p>
         <a href="#">Feature</a>
         <a href="#">About us</a>
         <a href="#">Products</a>
@@ -25,9 +24,11 @@
 
     </nav>
     <main>
+        <img id="decoration" src="https://maxijett.com.tr/assets/modules/Theme/images/shape/shape_36.svg">
+        <img id="decoration-reverse" src="https://maxijett.com.tr/assets/modules/Theme/images/shape/shape_36.svg">
         <div class="invitation">
             <h1>Improve the way <a href="#" class="know-more">you charge</a>, with one click</h1>
-            <p>Deski delivered blazing fast persormance,<br> striking word solution</p>
+            <p>Deski delivered blazing fast persormance, striking word solution</p>
             <div class="download-buttons">
                 <div class="apple">
                     <button class="applebtn" type="button">App store</button>
@@ -36,8 +37,8 @@
                 </div>
                 <div class="play-store">
                     <button class="downloadbtn" type="button">Play store</button>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlPq1phb64wZjcBqp-xZYD3am4svjU7U4p1Q&s" alt="play-store">
-                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlPq1phb64wZjcBqp-xZYD3am4svjU7U4p1Q&s"
+                        alt="play-store">
                 </div>
             </div>
             <p class="unhighlighted-text">Different Platform&#x3f; <a class="contact" href="#">Contact us</a></p>
@@ -64,10 +65,10 @@
                 </div>
             </div>
             <div class="salary">
-                <h1>&#x20AC;1500
-                </h1>
+                <h2>&#x20AC;1500
+                </h2>
                 <p class="unhighlighted-text">Monthly salary</p>
-                <h1>&#x20AC;750</h1>
+                <h2>&#x20AC;750</h2>
                 <p class="unhighlighted-text">Salary available</p>
 
             </div>
@@ -78,11 +79,14 @@
 
 
         </div>
-        <div class="download-speed">
-            <h2>Fast uploading</h2>
-            <p>Avg speed <span>73%</span></p>
-
-
+        <div class="download-status">
+            <div class="download-speed">
+                <h2>Fast uploading</h2>
+                <p>Avg speed </p>
+            </div>
+            <div id="download-percentage">
+                <p>73%</p>
+            </div>
         </div>
         <div class="dev-sugesstions">
 
@@ -97,18 +101,21 @@
 
     <div class="partnership">
         <h2 class="center">Over 32k+ software business growing with dit.io</h2>
-        <img class="logo-png" src="https://images.seeklogo.com/logo-png/16/2/microsoft-logo-png_seeklogo-168319.png"
-            alt="Microsoft logo">
-        <img class="logo-jpg"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsaIwBckSCkOpcw9keYXk-A-8O__AusLgEoA&s"
-            alt="Trello logo">
-            <img class="logo-jpg" src="https://d3lzcn6mbbadaf.cloudfront.net/media/details/__sized__/ANI-20241031143001-thumbnail-320x180-70.jpg" alt="Google-logo">
-        <img class="logo-jpg"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5cUyVhM7gSOUBGj-eqXwhemUgUJgTTK9m0A&s"
-            alt="Dropbox logo">
-        <img class="logo-png"
-            src="https://elearningindustry.com/wp-content/uploads/2020/08/d6c105871f98c114a0ad024a49b5b2e2.png"
-            alt="Slack logo">
+        <a href="https://www.microsoft.com/" target="_blank"><img class="logo-png"
+                src="https://images.seeklogo.com/logo-png/16/2/microsoft-logo-png_seeklogo-168319.png"
+                alt="Microsoft logo"></a>
+        <a href="https://trello.com" target="_blank"><img class="logo-jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsaIwBckSCkOpcw9keYXk-A-8O__AusLgEoA&s"
+                alt="Trello logo"></a>
+        <a href="www.google.com" target="_blank"><img class="logo-jpg"
+                src="https://d3lzcn6mbbadaf.cloudfront.net/media/details/__sized__/ANI-20241031143001-thumbnail-320x180-70.jpg"
+                alt="Google-logo"></a>
+        <a href="https://www.dropbox.com/" target="_blank"><img class="logo-jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5cUyVhM7gSOUBGj-eqXwhemUgUJgTTK9m0A&s"
+                alt="Dropbox logo"></a>
+        <a href="https://slack.com/" target="_blank"><img class="logo-png"
+                src="https://elearningindustry.com/wp-content/uploads/2020/08/d6c105871f98c114a0ad024a49b5b2e2.png"
+                alt="Slack logo"></a>
     </div>
 
 
@@ -116,6 +123,7 @@
 
 
     <div class="products">
+        <img id="decoration-main" src="https://maxijett.com.tr/assets/modules/Theme/images/shape/shape_36.svg">
         <h1 class="center">The <a class="know-more">product</a> we work with</h1>
         <div class="customer-options">
             <a href="#">
@@ -145,7 +153,7 @@
 
     <div class="statics">
         <div class="static-numbers">
-            <h1>Okay, Let's see <br><span class="know-more">dit.io in numbers</span></h1>
+            <h1 id="declaration">Okay, Let's see <br><span class="know-more">dit.io in numbers</span></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipsiscing elit,<br> Urna sit shjg hdgdyv sgfn.</p>
             <div class="user-data">
                 <div class="downloads">
@@ -166,14 +174,24 @@
             </div>
         </div>
         <div class="advertisement">
+
+            <img id="man-customer"
+                src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ45hvdUQe2kNIKfB46kFUx1Dyc4lBFCvhhCDgI08BGzdtBenyu"
+                alt="Man picture">
+            <img id="woman-customer"
+                src="https://cdn.prod.website-files.com/60d2fb4eaefc620384eff1d0/60e5814141fca110b2ee4ad5_benefit-2.png"
+                alt="Woman picture">
             <div class="tutorial">
+                <img id="highlight-img" src="https://www.singaporepools.com.sg/assets/SP/livewiretelecast/lp.png">
                 <div>
-                <h2>How to create account</h2>
-                <p>Study using tutorials</p>
-            </div>
+                    <h2>How to create account</h2>
+                    <p>Study using tutorials</p>
+                </div>
                 <button class="know-more-btn" type="button">Watch</button>
             </div>
             <div class="tutor">
+                <img src="https://worldwidequest.com/resources/images/themes/photo_thumbnail_5d6e39bebd08d_11.png"
+                    alt="anchor">
                 <h2>Study with me</h2>
                 <p>If you want a hub to further your knowledge.</p>
                 <button type="button" class="signup">Join</button>
@@ -181,26 +199,27 @@
             </div>
         </div>
     </div>
-
-
-
     <h1 class="center">We are helping <a class="know-more">customer globally</a> everytime</h1>
     <div class="customer-interface">
 
         <div class="app-interface">
+            <img id="phone"
+                src="https://cdn.vectorstock.com/i/2000v/09/31/smartphone-flat-red-color-icon-vector-6080931.avif">
             <h2>Mobile App Interface</h2>
             <p>Deski delivered blazing fast perform striking word solution our company will be best ever soon</p>
-            <button class="know-more-btn" type="button">Know More</button>
+            <button id="additional-info-btn" type="button">Know More</button>
         </div>
         <div class="app-settings">
-            <h1>Settings</h1>
-            <h2 class="menu">Account</h2>
+            <h2>Settings</h2>
+            <p class="menu">Account</p>
             <p class="name">Tim david</p>
-            <p class="career">Designer</p>
+            <p class="career"><i class="fa-solid fa-address-book"></i> Designer<i id="arrow-icon"
+                    class="fa-solid fa-arrow-right"></i></p>
             <p class="menu">Settings</p>
             <div class="lang ">
-                <p>Language</p>
-                <p class="choose-lang unhighlighted-text">English</p>
+                <p><i id="smiley-icon" class="fa-solid fa-face-smile"></i> Language</p>
+                <p class="choose-lang unhighlighted-text">English<i id="arrow-icon2"
+                        class="fa-solid fa-arrow-right"></i></p>
             </div>
 
         </div>
@@ -208,7 +227,17 @@
             <h1 class="center">Boost social app to make new friends</h1>
             <button class="login" type="button">Login</button>
             <button class="signup" type="button">Sign up</button>
-            <p class="name">Angel jorina</p>
+            <div class="friend-section">
+                <i class="fa-solid fa-arrow-right"></i>
+
+                <img class="angela-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/110/802/non_2x/woman-with-curly-hair-is-using-her-smartphone-and-smiling-free-photo.jpg"
+                    alt="
+            Angela pic">
+                <p class="name">Angel jorina</p>
+                <i class="fa-regular fa-bell"></i>
+            </div>
+
 
         </div>
 
@@ -218,33 +247,39 @@
     <div class="clients">
         <h1 class="center"><a class="know-more" href="#">Some words</a> from our clients</h1>
         <div class="testimonials">
-            <div class="edwin-testimony">
-                <a href="#">
+            <a href="#">
+                <div class="edwin-testimony">
+
                     <div class="ratings">
-                    <i class="fa-solid fa-star"></i> <span>5.0</span>
-                </div>
-                    <img src="https://www.shutterstock.com/image-photo/young-black-woman-natural-textured-260nw-2585601837.jpg" alt="Edwin">
+                        <i class="fa-solid fa-star"></i> <span>5.0</span>
+                    </div>
+                    <img src="https://www.shutterstock.com/image-photo/young-black-woman-natural-textured-260nw-2585601837.jpg"
+                        alt="Edwin">
                     <h2>Edwin Zohir</h2>
                     <h3>Businessman</h3>
                     <p>We make all payments easier and simpler. Receive and send payment funds without cash. DPay makes
                         moving
                         money as simple.jrjfer hnf ke cv bdh67 vb</p>
 
-                </a>
-            </div>
-            <div class="jecson-testimony ">
-                <a href="#">
+
+                </div>
+            </a>
+            <a href="#">
+                <div class="jecson-testimony ">
+
                     <div class="ratings">
                         <i class="fa-solid fa-star"></i> <span>5.0</span>
                     </div>
-                    <img src="https://www.shutterstock.com/image-photo/young-black-woman-natural-textured-260nw-2585601837.jpg" alt="Jecson">
+                    <img src="https://www.shutterstock.com/image-photo/young-black-woman-natural-textured-260nw-2585601837.jpg"
+                        alt="Jecson">
                     <h2>Jecson </h2>
                     <h3>Businessman</h3>
                     <p>We make all payments easier and simpler. Receive and send payment funds without cash. DPay makes
                         moving
                         money as simple.jrjfer hnf ke cv bdh67 vb</p>
-                </a>
-            </div>
+
+                </div>
+            </a>
         </div>
     </div>
 
@@ -255,8 +290,7 @@
 
     <div class="download">
         <div class="consider-download">
-            <img src="https://website-cdn.studysmarter.de/2021/12/en/Flashcards_Banner.svg"
-                alt="Download options">
+            <img src="https://website-cdn.studysmarter.de/2021/12/en/Flashcards_Banner.svg" alt="Download options">
         </div>
         <div class="download-options">
             <p class="unhighlighted-text">Over <span class="highlighted-text">50,000+ Users</span></p>
@@ -274,8 +308,7 @@
     <footer>
 
         <div class="footer-upper">
-            <img src="font/dit.ico" width="30" height="30"
-                alt="Dit logo"><span>dit.io</span>
+            <img src="font/dit.ico" width="30" height="30" alt="Dit logo"><span>dit.io</span>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-facebook-f"></i>

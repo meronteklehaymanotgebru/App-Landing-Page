@@ -1,10 +1,28 @@
 * {
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 body {
-    font-family: "Nunito font";
+    overflow-x: hidden;
+
+    #decoration {
+        position: absolute;
+        top: 60%;
+        right: 50%;
+        transform: translateY(-50%);
+    }
+
+    #decoration-reverse {
+        position: absolute;
+        top: 30%;
+        left: 90%;
+        transform: translateY(-50%);
+    }
+
+    h1:first-child {
+        font-family: Wid-font;
+        font-weight: lighter;
+    }
 }
 
 @font-face {
@@ -12,14 +30,25 @@ body {
     src: url('font/Nunito-VariableFont_wght.ttf') format('ttf');
 }
 
+@font-face {
+    font-family: Wid-font;
+    src: url(font/wid.ttf);
+}
+
 nav {
     display: flex;
     align-items: center;
+    margin: 0 2%;
+    justify-content: center;
+
+    #logo-name {
+        font-weight: bold;
+    }
 }
 
 nav a {
     text-decoration: none;
-    font-size: 150%;
+    font-size: 1.5rem;
     color: gray;
     cursor: pointer;
     margin: 0 3.5%;
@@ -31,10 +60,11 @@ nav a:hover {
 
 .btn {
     width: 15%;
-    padding: 1.5%;
+    padding: 0.9375rem;
     border-radius: 3.125rem;
     cursor: pointer;
     border: none;
+    font-weight: bold;
 }
 
 .login {
@@ -43,69 +73,84 @@ nav a:hover {
 
 .signup {
     color: white;
-    background-color: pink;
+    background-color: #ff6699;
 }
 
-nav span {
-    font-weight: bold;
+main {
+    display: flex;
+    margin: 3% auto;
+    background-color: #D9F3F1;
+    padding: 1% 2%;
 }
 
 .invitation {
     width: 50%;
-    margin: 0 auto;
+    padding: 1rem;
+
+    h1 {
+        font-size: 5.5rem;
+        width: 70%;
+        font-family: Wid-font;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    p {
+        font-size: 1.4rem;
+        margin: 1rem 0;
+    }
+
+    .apple {
+        position: relative;
+        display: inline-block;
+
+        img {
+            width: 30%;
+            position: absolute;
+            left: 10%;
+            top: 30%;
+            max-width: 6rem;
+        }
+    }
+
+    .play-store {
+        position: relative;
+        display: inline-block;
+
+        img {
+            width: 15%;
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 3rem;
+        }
+    }
+
+    .download-buttons {
+        display: flex;
+        gap: 0.625rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+
+        button {
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.625rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            max-width: 12rem;
+
+            &:hover {
+                border: palevioletred solid 0.0625rem;
+                background-color: white;
+                color: black;
+            }
+        }
+    }
 }
 
-.invitation h1 {
-    font-size: 500%;
-    width: 50%;
-}
-
-.apple {
-    position: relative;
-}
-
-.apple img {
-    width: 20%;
-    position: absolute;
-    left: 3%;
-    top: 20%;
-}
-
-.play-store {
-    position: relative;
-}
-
-.play-store img {
-    width: 15%;
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%); 
-}
-
-.download-buttons {
-    display: flex;
-    gap: 10%;
-    width: 100%;
-}
-
-.download-buttons button {
-    position: relative;
-    flex:1;
-    width: 100%;
-    padding: 5%;
-    border-radius: 0.625rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.download-buttons button:hover {
-    border: palevioletred solid 0.0625rem;
-    background-color: white;
-    color: black;
-}
-
-.downloadbtn {
+descargabtn {
     background-color: transparent;
 }
 
@@ -114,60 +159,71 @@ nav span {
     color: white;
 }
 
-main {
-    display: flex;
-    position: relative;
-    margin: 3% auto;
-    background-color: rgb(218, 243, 242);
-}
-
 .portfolio {
     background-color: white;
     margin: 3% auto;
-    width: 30%;
-    padding: 0 2%;
+    width: 25%;
+    padding: 2%;
+    rotate: -5deg;
 }
 
 .promo-message {
     display: flex;
-    gap: 3%;
+    gap: 5%;
 }
 
-.download-speed {
+.download-status {
+    justify-content: center;
+    display: flex;
+    gap: 0.9375rem;
     position: absolute;
-    top: 85%;
+    top: 77%;
     background-color: white;
-    width: 25%;
-    right: 15%;
+    width: 20%;
+    right: 17%;
     border-radius: 1.25rem;
     z-index: 2;
+    rotate: -10deg;
+    padding: 1% auto;
+}
+
+#download-percentage {
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3%;
+    border-bottom: solid 0.375rem #62c9c0;
+    border-right: solid 0.375rem #62c9c0;
 }
 
 .dev-sugesstions {
     position: absolute;
+    padding-left: 1%;
+    rotate: 15deg;
     z-index: 3;
-    right: 3%;
+    right: 9%;
     top: 45%;
-    width: 10%;
+    width: 9%;
     background-color: white;
 }
 
 .profile-pic {
-    border-radius: 50%;
-    width: 10%;
+    border-radius: 70%;
+    width: 15%;
+    border-bottom: solid 0.25rem #ff6699;
+    border-left: solid 0.25rem #ff6699;
 }
 
 .dev-image {
     z-index: 2;
     position: absolute;
-    top: 60%;
-    left: 80%;
+    top: 65%;
+    right: 5%;
     border-radius: 2.5rem;
 }
 
 .profile-details {
     display: flex;
-    gap: 70%;
+    gap: 60%;
 }
 
 .experience {
@@ -176,56 +232,74 @@ main {
 
 #confirmation {
     background-color: rgb(200, 245, 230);
-    width: 65%;
+    width: 50%;
     color: blue;
+    font-size: large;
 }
 
 .partnership {
     margin: 10% auto;
-}
 
-.partnership img {
-    margin-right: 4%;
-}
+    img {
+        margin-right: 4%;
+    }
 
-.logo-png {
-    width: 15%;
-    padding: 0 5%;
-}
+    .logo-png {
+        width: 15%;
+        padding: 0 5%;
+    }
 
-.logo-jpg {
-    width: 15%;
-    padding: 0 3%;
+    .logo-jpg {
+        width: 15%;
+        padding: 0 3%;
+    }
 }
 
 .customer-interface {
     display: flex;
     gap: 6.25rem;
     background-color: beige;
-    margin: 0 0 15%;
+    margin: 0 10% 10%;
+    padding: 1%;
+
+    #additional-info-btn {
+        border-radius: 3.25rem;
+        padding: 4%;
+        background-color: #283150;
+        color: white;
+    }
 }
 
 .app-interface {
     width: 30%;
     color: #283150;
     margin: 10% auto;
+
+    #phone {
+        width: 5%;
+        margin: 0 23%;
+    }
 }
 
 .app-settings {
     width: 30%;
     rotate: 3deg;
     margin: 5%;
-    background-color: lightgoldenrodyellow;
-}
+    background-color: white;
 
-.know-more-btn {
-    color: white;
-    background-color: #283150;
-    border-radius: 0.9375rem;
-    padding: 4%;
-    width: 40%;
-    font-weight: bold;
-    cursor: pointer;
+    #smiley-icon {
+        color: red;
+    }
+
+    #arrow-icon {
+        margin-left: 80%;
+        rotate: 3deg;
+    }
+
+    #arrow-icon2 {
+        margin-left: 80%;
+        rotate: 3deg;
+    }
 }
 
 .name {
@@ -243,13 +317,40 @@ main {
 }
 
 .menu {
-    font-size: 150%;
+    font-size: 1.5rem;
 }
 
 .profile {
     margin: 3%;
+    width: 60%;
     rotate: 10deg;
-    background-color: lightgoldenrodyellow;
+    background-color: white;
+
+    .angela-img {
+        border-radius: 50%;
+        width: 25%;
+        height: 25%;
+        padding: 1%;
+        border: dashed orange;
+    }
+
+    .friend-section {
+        position: relative;
+        margin-top: 15%;
+        text-align: center;
+
+        .fa-solid {
+            rotate: 180deg;
+            position: absolute;
+            left: 20%;
+        }
+
+        .fa-regular {
+            position: absolute;
+            right: 20%;
+            top: 0;
+        }
+    }
 }
 
 .profile button {
@@ -274,7 +375,15 @@ main {
 
 .products {
     background-color: rgb(218, 243, 242);
-    padding: 5%;
+    padding: 2%;
+    line-height: 2;
+    margin: 0 10%;
+    position: relative;
+
+    #decoration-main {
+        position: absolute;
+        right: 5%;
+    }
 }
 
 .customer-options {
@@ -302,8 +411,13 @@ main {
 .statics {
     display: flex;
     background-color: beige;
-    margin: 15%;
+    margin: 10%;
+    padding: 1%;
     gap: 30%;
+
+    #declaration {
+        font-size: 3.125rem;
+    }
 }
 
 .user-data {
@@ -311,10 +425,66 @@ main {
     gap: 15%;
 }
 
-.tutorial {
-    background-color: white;
-    width: 100%;
-    display: flex;
+.advertisement {
+    width: 50%;
+    position: relative;
+
+    img {
+        width: 30%;
+    }
+
+    #highlight-img {
+        width: 10%;
+        height: 10%;
+    }
+
+    #man-customer {
+        position: absolute;
+        top: 25%;
+        width: 30%;
+    }
+
+    #woman-customer {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 45%;
+    }
+
+    .tutor {
+        width: 25%;
+        margin-top: 50%;
+        text-align: center;
+        box-shadow: 0.125rem 0.1875rem 0.1875rem 0.25rem #283150;
+        padding: 1%;
+
+        button {
+            width: 90%;
+            border-radius: 3.125rem;
+            border: transparent;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+
+    .know-more-btn {
+        color: white;
+        background-color: #283150;
+        border-radius: 0.9375rem;
+        padding: 0 5%;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .tutorial {
+        background-color: white;
+        margin: 2%;
+        display: flex;
+        justify-content: space-evenly;
+        border-left: 3.125rem orange solid;
+        box-shadow: 0 1.875rem 1.875rem orange;
+        border-right: 1.875rem orange solid;
+    }
 }
 
 .download {
@@ -354,7 +524,7 @@ main {
 }
 
 .heading {
-    font-size: 300%;
+    font-size: 3rem;
 }
 
 .store {
@@ -382,6 +552,10 @@ main {
     color: black;
 }
 
+.testimonials a:hover {
+    border: pink solid;
+}
+
 .testimonials img {
     border-radius: 50%;
     width: 15%;
@@ -394,6 +568,7 @@ main {
 
 .clients {
     background-color: beige;
+    margin: 10%;
 }
 
 .center {
@@ -403,22 +578,24 @@ main {
 .edwin-testimony {
     width: 40%;
     position: relative;
+    padding: 5%;
 }
 
 .edwin-testimony .ratings {
     position: absolute;
-    right: 2%;
+    right: 0;
     top: 10%;
 }
 
 .jecson-testimony {
     width: 40%;
     position: relative;
+    padding: 5%;
 }
 
 .jecson-testimony .ratings {
     position: absolute;
-    right: 2%;
+    right: 0;
     top: 10%;
 }
 
@@ -478,7 +655,6 @@ footer li:first-child {
 footer ul {
     list-style-type: none;
     line-height: 2.5rem;
-   
 }
 
 .fa-brands {
@@ -488,14 +664,17 @@ footer ul {
 
 @media (max-width: 1024px) {
     .invitation h1 {
-        font-size: 350%;
+        font-size: 3.5rem;
     }
+
     .portfolio {
         width: 45%;
     }
+
     .download-speed {
         width: 20%;
     }
+
     .dev-sugesstions {
         width: 15%;
     }
@@ -506,51 +685,100 @@ footer ul {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .btn {
         width: 30%;
     }
+
     .invitation {
         width: 80%;
+        padding: 0.75rem;
+
+        h1 {
+            font-size: 2.5rem;
+            width: 100%;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .download-buttons {
+            flex-direction: column;
+            gap: 0.5rem;
+
+            button {
+                padding: 0.75rem 1rem;
+                max-width: 100%;
+            }
+        }
     }
-    .invitation h1 {
-        font-size: 250%;
-    }
+
     .portfolio {
         width: 100%;
     }
+
     .download-speed {
         position: static;
         width: 100%;
         margin: 2% 0;
     }
+
     .dev-sugesstions {
         position: static;
         width: 100%;
         margin: 2% 0;
     }
+
     .dev-image {
         position: static;
         width: 50%;
     }
+
     .customer-interface {
         flex-direction: column;
         gap: 2%;
     }
-    .app-interface, .app-settings, .profile {
+
+    .app-interface,
+    .app-settings,
+    .profile {
         width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     nav a {
-        font-size: 100%;
+        font-size: 1rem;
     }
-    .invitation h1 {
-        font-size: 150%;
+
+    .invitation {
+        width: 100%;
+        padding: 0.5rem;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .apple img,
+        .play-store img {
+            width: 20%;
+            max-width: 2.5rem;
+        }
+
+        .download-buttons {
+            margin-top: 0.75rem;
+
+            button {
+                padding: 0.5rem 0.75rem;
+            }
+        }
     }
-    .download-buttons button {
-        padding: 10%;
-    }
+
     .footer-upper {
         flex-direction: column;
     }
